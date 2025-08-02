@@ -9,5 +9,8 @@ RSpec.describe StringsCalculator do
         it "returns the number itself for a single number" do
             expect(StringsCalculator.add("1")).to eq(1)
         end
+        it "returns the sum of comma-separated numbers in the string" do
+            expect(StringsCalculator.add("1,5")).to eq(6)
+          end
     end
 end
