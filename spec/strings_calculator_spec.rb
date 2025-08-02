@@ -11,6 +11,9 @@ RSpec.describe StringsCalculator do
         end
         it "returns the sum of comma-separated numbers in the string" do
             expect(StringsCalculator.add("1,5")).to eq(6)
-          end
+        end
+        it "handles newlines as delimiters along with commas" do
+            expect(StringsCalculator.add("1\n2,3")).to eq(6)
+        end
     end
 end
